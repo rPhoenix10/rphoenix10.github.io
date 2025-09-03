@@ -36,3 +36,8 @@ export const projects = [
     repoUrl: "https://github.com/rPhoenix10"
   },
 ];
+
+export const personalInfo = {
+  name: 'Julius Sale',
+  tagline: 'Nature Lover. Code Enthusiast.|Crafting Web & App Solutions.|Aspiring Platform Engineer.'
+};

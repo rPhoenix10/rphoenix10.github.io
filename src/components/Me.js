@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './Me.css';
-import bannerBackground from '../images/coulon.jpg';
+import bannerBackground from '../images/nature/coulon.jpg';
+import { personalInfo } from '../portfolioData';
 
 const Me = ({ onButtonClick }) => {
   const [nameText, setNameText] = useState('');
   const [taglineText, setTaglineText] = useState('');
   const [typingStep, setTypingStep] = useState('name'); 
   
-  const fullSaleName = 'Julius Sale';
-  const fullTagline = 'Nature Lover. Code Enthusiast.| Crafting Web & App Solutions.| Aspiring Platform Engineer.';
+  const fullSaleName = personalInfo.name
+  const fullTagline = personalInfo.tagline;
 
   useEffect(() => {
     let i = 0;
@@ -39,7 +40,7 @@ const Me = ({ onButtonClick }) => {
         typeTagline();
     }
 
-  }, [typingStep]);
+  }, [typingStep, fullSaleName, fullTagline]);
 
   return (
     <section id="banner" style={{ backgroundImage: `url(${bannerBackground})`}}>

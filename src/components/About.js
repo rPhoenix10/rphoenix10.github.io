@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './About.css';
-import Ranier from '../images/ranier.jpg';
-import Beach from '../images/beach.jpg';
-import Blanca from '../images/blanca.jpg';
-import Oregon from '../images/oregon.jpg';
-import Ruston from '../images/ruston.jpg';
+import Ranier from '../images/nature/ranier.jpg';
+import Beach from '../images/nature/beach.jpg';
+import Blanca from '../images/nature/blanca.jpg';
+import Oregon from '../images/nature/oregon.jpg';
+import Ruston from '../images/nature/ruston.jpg';
 
 const images = [
     { src: Ranier, label: 'Above the clouds, Mount Rainier' },
