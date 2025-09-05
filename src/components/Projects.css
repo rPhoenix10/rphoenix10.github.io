@@ -39,6 +39,7 @@
   box-shadow: 0 0.1em 0.25em 0 rgba(0,0,0,0.075);
   width: 100%;
   text-align: center;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .feature .content {
@@ -64,10 +65,16 @@
     display: block;
 }
 
-.carousel-arrow {
+.carousel-arrow, .slider-arrow {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.carousel-arrow{
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 90%;
     transform: translateY(-50%);
     font-size: 2em;
     color: white;
@@ -116,4 +123,22 @@
 .actions.major {
     margin-top: 3em;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+  #two {
+    padding: 2em 0;
+  }
+
+  .slider-arrow {
+    font-size: 2em;
+  }
+
+  .carousel-arrow {
+    font-size: 1.5em;
+  }
+
+  .features-slider {
+    gap: 0.5em;
+  }
 }

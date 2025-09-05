@@ -1,5 +1,6 @@
 import React from 'react';
 import './Resume.css';
+import { links } from '../portfolioData';
 
 const Resume = ({ onClose }) => {
   return (
@@ -11,7 +12,7 @@ const Resume = ({ onClose }) => {
         </div>
          
         <embed
-          src="/Julius Sale CV.pdf"
+          src={links.resumePDF}
           type="application/pdf"
           className="resume-embed"
         />

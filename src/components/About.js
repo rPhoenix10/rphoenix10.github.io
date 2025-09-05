@@ -1,18 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './About.css';
-import Ranier from '../images/nature/ranier.jpg';
-import Beach from '../images/nature/beach.jpg';
-import Blanca from '../images/nature/blanca.jpg';
-import Oregon from '../images/nature/oregon.jpg';
-import Ruston from '../images/nature/ruston.jpg';
-
-const images = [
-    { src: Ranier, label: 'Above the clouds, Mount Rainier' },
-    { src: Beach, label: 'A Beach Sunset' },
-    { src: Blanca, label: 'Lake Blanca' },
-    { src: Oregon, label: 'The Oregon Coast' },
-    { src: Ruston, label: 'The Point Ruston ship vessel, the Mount Ranier as a background' }
-];
+import { aboutMe, aboutMeGallery } from '../portfolioData';
 
 const About = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,11 +11,21 @@ const About = () => {
     const touchStartY = useRef(0);
 
     const resetTimeout = () => { if (timeoutRef.current) { clearTimeout(timeoutRef.current); } }
-    useEffect(() => { resetTimeout();
-        if (!isPaused) { timeoutRef.current = setTimeout(() =>
+
+    useEffect(() => {
+        resetTimeout();
+        if (!isPaused) {
+            timeoutRef.current = setTimeout(() =>
             setCurrentIndex((prevIndex) =>
-            prevIndex === images.length - 1 ? 0 : prevIndex + 1), 3000); }
-            return () => { resetTimeout(); }; }, [currentIndex, isPaused]);
+            prevIndex === aboutMeGallery.length - 1 ? 0 : prevIndex + 1), 3000);
+        }
+        
+        return () => {
+            resetTimeout(); 
+        };
+    }, [currentIndex, isPaused]);
+
+
     const handleTouchStart = (e) => { touchStartY.current = e.touches[0].clientY; };
     const handleTouchEnd = (e) => { const touchEndY = e.changedTouches[0].clientY;
         if (touchStartY.current - touchEndY > 50) { setShowControls(true); } };
@@ -47,10 +45,10 @@ const About = () => {
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
                     >
-                        <img src={images[currentIndex].src} alt={images[currentIndex].label} />
+                        <img src={aboutMeGallery[currentIndex].src} alt={aboutMeGallery[currentIndex].label} />
                         <div className="slideshow-progress"></div>
                         <div className="thumbnails">
-                            {images.map((img, index) => (
+                            {aboutMeGallery.map((img, index) => (
                                 <div 
                                     key={index} 
                                     className={`thumbnail ${currentIndex === index ? 'active' : ''}`}
@@ -75,7 +73,7 @@ const About = () => {
                     <button 
                         className="collapse-toggle-icon" 
                         onClick={() => setIsContentVisible(!isContentVisible)}
-                        title={isContentVisible ? 'View Images' : 'View About Me'}
+                        title={isContentVisible ? 'View aboutMeGallery' : 'View About Me'}
                     >
                         <i className={`fas ${isContentVisible ? 'fa-chevron-right' : 'fa-chevron-left'}`}></i>
                     </button>                    
@@ -85,16 +83,9 @@ const About = () => {
                         <header className="major">
                             <h2>About Me</h2>
                         </header>
-                        <p>I'm a passionate web developer based in Kent, 
-                            WA, with a knack for creating intuitive and dynamic user experiences. 
-                            My journey into tech was fueled by the Web &
-                            App Development Program at <strong>Ancora Training</strong>,
-                            where I dove deep into modern web fundamentals, 
-                            from advanced JavaScript and APIs to React.</p>
-                        <p>I thrive in collaborative environments and enjoyed contributing to the
-                            <strong> Digital Keys capstone project</strong> at Bellevue College. 
-                            I'm eager to apply my skills in a professional setting and
-                            help build amazing applications.</p>
+                        {aboutMe.paragraphs.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                        ))}
                     </div>
                 </div>                    
             </div>

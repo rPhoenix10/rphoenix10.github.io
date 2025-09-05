@@ -20,9 +20,13 @@ const ProjectCard = ({ project }) => {
     return (
         <section className="feature">
             <div className="image-carousel">
-                <div className="carousel-arrow left" onClick={goToPreviousImage}>&#10094;</div>
+                <button className="carousel-arrow left" onClick={goToPreviousImage} aria-label="Previous image">
+                     <span aria-hidden="true">&#10094;</span>
+                </button>
                 <img src={project.imageUrls[currentImageIndex]} alt={`${project.title} screenshot ${currentImageIndex + 1}`} />
-                <div className="carousel-arrow right" onClick={goToNextImage}>&#10095;</div>
+                <button className="carousel-arrow right" onClick={goToNextImage} aria-label="Next image">
+                    <span aria-hidden="true">&#10095;</span>
+                </button>
                 <div className="carousel-dots">
                     {project.imageUrls.map((_, index) => (
                         <span 

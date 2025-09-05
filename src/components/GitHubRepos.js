@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './GitHubRepos.css';
+import { github } from '../portfolioData';
 
 const GithubRepos = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const GITHUB_USERNAME = 'rPhoenix10';
+  const GITHUB_USERNAME = github.username;
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -24,7 +25,7 @@ const GithubRepos = () => {
       }
     };
     fetchRepos();
-  }, []);
+  }, [GITHUB_USERNAME]);
 
   return (
     <section id="github-repos">

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Me.css';
-import bannerBackground from '../images/nature/coulon.jpg';
-import { personalInfo } from '../portfolioData';
+import { personalInfo, aboutMeGallery } from '../portfolioData';
 
 const Me = ({ onButtonClick }) => {
   const [nameText, setNameText] = useState('');
@@ -43,7 +42,7 @@ const Me = ({ onButtonClick }) => {
   }, [typingStep, fullSaleName, fullTagline]);
 
   return (
-    <section id="banner" style={{ backgroundImage: `url(${bannerBackground})`}}>
+    <section id="banner" style={{ backgroundImage: `url(${aboutMeGallery[0].src})` }}>
       <div className="inner">
         <h2>
           <span className="text-highlight">{nameText}</span>
