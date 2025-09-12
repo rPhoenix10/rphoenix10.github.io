@@ -2,12 +2,15 @@ import React, { useState, useCallback } from 'react';
 import './About.css';
 import { aboutMe, aboutMeGallery } from '../portfolioData';
 import { useCarousel } from './hooks/useCarousel';
+import { useMediaQuery } from './hooks/useMediaQuery';
 import Collapse from './Collapse';
 
 const About = () => {
     const { currentIndex, setCurrentIndex, isPaused, setIsPaused } = useCarousel(aboutMeGallery.length, true, 3000);
     const [showControls, setShowControls] = useState(false);
     const [isContentVisible, setIsContentVisible] = useState(true);
+
+    const isMobile = useMediaQuery('(max-width: 768px)');
 
     const handleToggleContent = useCallback(() => {
         setIsContentVisible(prev => !prev);
@@ -71,7 +74,12 @@ const About = () => {
                     </button>               
                 </div>
 
-                <Collapse isOpen={isContentVisible} className="content-wrapper" width="500px">
+                <Collapse 
+                    isOpen={isContentVisible} 
+                    className="content-wrapper" 
+                    width={isMobile ? '100%' : '500px'}
+                    axis={isMobile ? 'vertical' : 'horizontal'} 
+                >
                     <div id="about-content" className="content">
                         <header className="major">
                             <h2>About Me</h2>

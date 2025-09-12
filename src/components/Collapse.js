@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-const Collapse = ({ isOpen, children, className, width = 'auto' }) => {
+const Collapse = ({ isOpen, children, className, width = 'auto', axis = 'horizontal' }) => {
   const contentRef = useRef(null);
   const wrapperRef = useRef(null);
 
@@ -8,12 +8,20 @@ const Collapse = ({ isOpen, children, className, width = 'auto' }) => {
     const wrapper = wrapperRef.current;
     if (wrapper) {
       if (isOpen) {
-        wrapper.style.maxWidth = `${contentRef.current.scrollWidth}px`;
+        if (axis === 'horizontal') {
+            wrapper.style.maxWidth = `${contentRef.current.scrollWidth}px`;
+        } else {
+            wrapper.style.maxHeight = `${contentRef.current.scrollHeight}px`;
+        }
       } else {
-        wrapper.style.maxWidth = '0px';
+        if (axis === 'horizontal') {
+            wrapper.style.maxWidth = '0px';
+        } else {
+            wrapper.style.maxHeight = '0px';
+        }
       }
     }
-  }, [isOpen]);
+  }, [isOpen, axis]);
 
   return (
     <div ref={wrapperRef} className={`collapsible-wrapper ${className}`}>
@@ -25,3 +33,4 @@ const Collapse = ({ isOpen, children, className, width = 'auto' }) => {
 };
 
 export default Collapse;
+

@@ -187,6 +187,11 @@
         align-items: center;
     }
 
+    .collapsible-wrapper {
+        transition: max-height 0.5s ease-in-out;
+        max-width: 100% !important; 
+    }
+
     .image-gallery, .content-container {
         width: 100%;
         flex-basis: auto;
