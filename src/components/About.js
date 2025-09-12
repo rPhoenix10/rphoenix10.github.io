@@ -1,44 +1,33 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useCallback } from 'react';
 import './About.css';
 import { aboutMe, aboutMeGallery } from '../portfolioData';
+import { useCarousel } from './hooks/useCarousel';
+import Collapse from './Collapse';
 
 const About = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
+    const { currentIndex, setCurrentIndex, isPaused, setIsPaused } = useCarousel(aboutMeGallery.length, true, 3000);
     const [showControls, setShowControls] = useState(false);
     const [isContentVisible, setIsContentVisible] = useState(true);
-    const timeoutRef = useRef(null);
-    const touchStartY = useRef(0);
 
-    const resetTimeout = () => { if (timeoutRef.current) { clearTimeout(timeoutRef.current); } }
+    const handleToggleContent = useCallback(() => {
+        setIsContentVisible(prev => !prev);
+    }, []);
 
-    useEffect(() => {
-        resetTimeout();
-        if (!isPaused) {
-            timeoutRef.current = setTimeout(() =>
-            setCurrentIndex((prevIndex) =>
-            prevIndex === aboutMeGallery.length - 1 ? 0 : prevIndex + 1), 3000);
-        }
-        
-        return () => {
-            resetTimeout(); 
-        };
-    }, [currentIndex, isPaused]);
+    const handleSetCurrentIndex = useCallback((index) => {
+        setCurrentIndex(index);
+    }, [setCurrentIndex]);
 
-
-    const handleTouchStart = (e) => { touchStartY.current = e.touches[0].clientY; };
-    const handleTouchEnd = (e) => { const touchEndY = e.changedTouches[0].clientY;
-        if (touchStartY.current - touchEndY > 50) { setShowControls(true); } };
+    const handleTogglePause = useCallback(() => {
+        setIsPaused(prev => !prev);
+    }, [setIsPaused]);
 
     return (
         <section id="one">
             <div className={`spotlight container ${!isContentVisible ? 'gallery-expanded' : ''}`}>
                 <div 
-                    className={`image-gallery ${showControls ? 'controls-visible' : ''}`}
+                    className="image-gallery"
                     onMouseEnter={() => setShowControls(true)}
                     onMouseLeave={() => setShowControls(false)}
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
                 >
                     <div 
                         className="main-image"
@@ -46,40 +35,44 @@ const About = () => {
                         onMouseLeave={() => setIsPaused(false)}
                     >
                         <img src={aboutMeGallery[currentIndex].src} alt={aboutMeGallery[currentIndex].label} />
-                        <div className="slideshow-progress"></div>
-                        <div className="thumbnails">
+                        {!isPaused && <div className="slideshow-progress"></div>}
+                        <div className={`thumbnails ${showControls ? 'controls-visible' : ''}`}>
                             {aboutMeGallery.map((img, index) => (
-                                <div 
+                                <button
                                     key={index} 
                                     className={`thumbnail ${currentIndex === index ? 'active' : ''}`}
-                                    onClick={() => setCurrentIndex(index)}
+                                    onClick={() => handleSetCurrentIndex(index)}
+                                    aria-label={`View image ${index + 1}: ${img.label}`}
                                 >
-                                    <img src={img.src} alt={`Thumbnail of ${img.label}`} />
-                                </div>
+                                    <img src={img.src} alt="" />
+                                </button>
                             ))}
                         </div>
                     </div>
-                    < br/>
+                     <br/>
                     <ul className="actions">
                         <li><a href="#two" className="button">See My Work</a></li>
                     </ul>
                     <button 
-                        className={`autoplay-toggle ${isPaused ? '' : 'active'}`}
-                        onClick={() => setIsPaused(!isPaused)}
-                        title={isPaused ? 'Resume Autoplay' : 'Pause Autoplay'}
+                        className={`autoplay-toggle ${showControls ? 'controls-visible' : ''} ${isPaused ? '' : 'active'}`}
+                        onClick={handleTogglePause}
+                        aria-label={isPaused ? 'Resume Autoplay' : 'Pause Autoplay'}
                     >
                         <i className={isPaused ? "fas fa-play" : "fas fa-pause"}></i>
                     </button>
                     <button 
                         className="collapse-toggle-icon" 
-                        onClick={() => setIsContentVisible(!isContentVisible)}
-                        title={isContentVisible ? 'View aboutMeGallery' : 'View About Me'}
+                        onClick={handleToggleContent}
+                        aria-label={isContentVisible ? 'Expand Gallery' : 'Show Details'}
+                        aria-controls="about-content"
+                        aria-expanded={isContentVisible}
                     >
                         <i className={`fas ${isContentVisible ? 'fa-chevron-right' : 'fa-chevron-left'}`}></i>
-                    </button>                    
+                    </button>               
                 </div>
-                <div className={`content-wrapper ${isContentVisible ? 'visible' : ''}`}>
-                    <div className="content">
+
+                <Collapse isOpen={isContentVisible} className="content-wrapper" width="500px">
+                    <div id="about-content" className="content">
                         <header className="major">
                             <h2>About Me</h2>
                         </header>
@@ -87,7 +80,7 @@ const About = () => {
                         <p key={index}>{paragraph}</p>
                         ))}
                     </div>
-                </div>                    
+                </Collapse>          
             </div>
         </section>
     );
