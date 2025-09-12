@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/js-portfolio/static/css/main.68a26b29.css",
-    "main.js": "/js-portfolio/static/js/main.92c165f6.js",
-    "static/js/453.d683d669.chunk.js": "/js-portfolio/static/js/453.d683d669.chunk.js",
-    "static/media/homepage.png": "/js-portfolio/static/media/homepage.5f13fcd4d4e6112010e5.png",
-    "static/media/coulon.jpg": "/js-portfolio/static/media/coulon.a84baa6d2509ee3c2a4a.jpg",
-    "static/media/blanca.jpg": "/js-portfolio/static/media/blanca.bf2d33180fe953267d0f.jpg",
-    "static/media/ruston.jpg": "/js-portfolio/static/media/ruston.c28b10312ecf37dd55e3.jpg",
-    "static/media/aboutMe.png": "/js-portfolio/static/media/aboutMe.a6e56cdef803939b5803.png",
-    "static/media/oregon.jpg": "/js-portfolio/static/media/oregon.0da0433d7a2be45a0d46.jpg",
-    "static/media/ranier.jpg": "/js-portfolio/static/media/ranier.1e38aea993dfccbaa831.jpg",
-    "static/media/contact.png": "/js-portfolio/static/media/contact.a7724d47fda93168bca1.png",
-    "static/media/projects.png": "/js-portfolio/static/media/projects.9eed78a43ba806532500.png",
-    "index.html": "/js-portfolio/index.html",
-    "main.68a26b29.css.map": "/js-portfolio/static/css/main.68a26b29.css.map",
-    "main.92c165f6.js.map": "/js-portfolio/static/js/main.92c165f6.js.map",
-    "453.d683d669.chunk.js.map": "/js-portfolio/static/js/453.d683d669.chunk.js.map"
+    "main.css": "/static/css/main.68a26b29.css",
+    "main.js": "/static/js/main.5527c858.js",
+    "static/js/453.d683d669.chunk.js": "/static/js/453.d683d669.chunk.js",
+    "static/media/homepage.png": "/static/media/homepage.5f13fcd4d4e6112010e5.png",
+    "static/media/coulon.jpg": "/static/media/coulon.a84baa6d2509ee3c2a4a.jpg",
+    "static/media/blanca.jpg": "/static/media/blanca.bf2d33180fe953267d0f.jpg",
+    "static/media/ruston.jpg": "/static/media/ruston.c28b10312ecf37dd55e3.jpg",
+    "static/media/aboutMe.png": "/static/media/aboutMe.a6e56cdef803939b5803.png",
+    "static/media/oregon.jpg": "/static/media/oregon.0da0433d7a2be45a0d46.jpg",
+    "static/media/ranier.jpg": "/static/media/ranier.1e38aea993dfccbaa831.jpg",
+    "static/media/contact.png": "/static/media/contact.a7724d47fda93168bca1.png",
+    "static/media/projects.png": "/static/media/projects.9eed78a43ba806532500.png",
+    "index.html": "/index.html",
+    "main.68a26b29.css.map": "/static/css/main.68a26b29.css.map",
+    "main.5527c858.js.map": "/static/js/main.5527c858.js.map",
+    "453.d683d669.chunk.js.map": "/static/js/453.d683d669.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68a26b29.css",
-    "static/js/main.92c165f6.js"
+    "static/js/main.5527c858.js"
   ]
 }
