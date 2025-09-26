@@ -1,13 +1,30 @@
+// Nature Images
 import coulonImg from './project-files/nature/coulon.jpg';
 import ranierImg from './project-files/nature/ranier.jpg';
 import oregonImg from './project-files/nature/oregon.jpg';
 import rustonImg from './project-files/nature/ruston.jpg';
 import blancaImg from './project-files/nature/blanca.jpg';
 
+// DK Project Images
+// import dk1Image from './project-files/dk-images/DK1.png';
+// import dk2Image from './project-files/dk-images/DK2.png';
+// import dk3Image from './project-files/dk-images/DK3.png';
+
+// Web Project Images
 import homepageImg from './project-files/web-project/homepage.png';
 import aboutMeImg from './project-files/web-project/aboutMe.png';
 import projectsImg from './project-files/web-project/projects.png';
 import contactImg from './project-files/web-project/contact.png';
+
+// Capstone Project Images
+import vr1Image from './project-files/capstone-images/VR1.png';
+import vr2Image from './project-files/capstone-images/VR2.png';
+import vr3Image from './project-files/capstone-images/VR3.png';
+import vr4Image from './project-files/capstone-images/VR4.png';
+import vr5Image from './project-files/capstone-images/VR5.png';
+import vr6Image from './project-files/capstone-images/VR6.png';
+import vr7Image from './project-files/capstone-images/VR7.png';
+import vr8Image from './project-files/capstone-images/VR8.png';
 
 export const aboutMeGallery = [
   { 
@@ -56,7 +73,7 @@ export const projects = [
         contactImg,
     ],
     liveUrl: "#",
-    repoUrl: "https://github.com/rPhoenix10"
+    repoUrl: "https://github.com/rPhoenix10/rphoenix10.github.io"
   },
 
   {
@@ -64,12 +81,17 @@ export const projects = [
     title: "Digital Keys (Capstone Project)",
     description: "A collaborative web application developed as a capstone project at Bellevue College, focusing on secure digital asset management.",
     imageUrls: [
-        "https://placehold.co/600x400/8d82c4/ffffff?text=DK+Image+1",
-        "https://placehold.co/600x400/8d82c4/ffffff?text=DK+Image+2",
-        "https://placehold.co/600x400/8d82c4/ffffff?text=DK+Image+3",
+        vr1Image,
+        vr2Image,
+        vr3Image,
+        vr4Image,
+        vr5Image,
+        vr6Image,
+        vr7Image,
+        vr8Image,
     ],
     liveUrl: "#",
-    repoUrl: "https://github.com/rPhoenix10"
+    repoUrl: "https://github.com/rPhoenix10/Capstone"
   },
 ];
 
