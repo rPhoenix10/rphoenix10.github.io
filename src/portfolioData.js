@@ -55,18 +55,18 @@ export const aboutMeGallery = [
 ];
 
 export const projects = [
-  {
-    id: 1,
-    title: "PE project",
-    description: "Another project",
-    imageUrls: [
-        "https://placehold.co/600x400/8d82c4/ffffff?text=PE+Image+1",
-        "https://placehold.co/600x400/8d82c4/ffffff?text=PE+Image+2",
-        "https://placehold.co/600x400/8d82c4/ffffff?text=PE+Image+3",
-    ],
-    liveUrl: "#",
-    repoUrl: "https://github.com/rPhoenix10"
-  },
+  // {
+  //   id: 1,
+  //   title: "PE project",
+  //   description: "Another project",
+  //   imageUrls: [
+  //       "https://placehold.co/600x400/8d82c4/ffffff?text=PE+Image+1",
+  //       "https://placehold.co/600x400/8d82c4/ffffff?text=PE+Image+2",
+  //       "https://placehold.co/600x400/8d82c4/ffffff?text=PE+Image+3",
+  //   ],
+  //   liveUrl: "#",
+  //   repoUrl: "https://github.com/rPhoenix10"
+  // },
   {
     id: 2,
     title: "Ancora Training Portfolio",

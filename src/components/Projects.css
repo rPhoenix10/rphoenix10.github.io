@@ -1,7 +1,6 @@
 #two {
     background-color: var(--bg-color);
     padding: 3em 0;
-    height: 100vh;
 }
 
 #two .major {
