@@ -12,7 +12,7 @@ const Resume = ({ onClose }) => {
         </div>
          
         <embed
-          src={links.resumePDF}
+          src={links.resumePdf}
           type="application/pdf"
           className="resume-embed"
         />

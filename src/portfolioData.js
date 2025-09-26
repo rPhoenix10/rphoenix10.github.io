@@ -120,6 +120,6 @@ export const github = {
 export const links = {
   github: 'https://github.com/rPhoenix10',
   linkedin: 'https://www.linkedin.com/in/kim-julius-sale-0722531a0/',
-  resumePdf: '/project-files/Julius Sale CV.pdf'
+  resumePdf: `./Julius-Sale-Resume.pdf`
 };
 
