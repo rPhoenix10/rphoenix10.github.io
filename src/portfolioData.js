@@ -1,5 +1,6 @@
 // Nature Images
 import coulonImg from './project-files/nature/coulon.jpg';
+import hawaiiImg from './project-files/nature/hawaii.jpg';
 import ranierImg from './project-files/nature/ranier.jpg';
 import oregonImg from './project-files/nature/oregon.jpg';
 import rustonImg from './project-files/nature/ruston.jpg';
@@ -30,6 +31,10 @@ export const aboutMeGallery = [
   { 
     src: coulonImg, 
     alt: 'Sunset view over the water at Gene Coulon Memorial Beach Park in Renton, WA' 
+  },
+  {
+    src: hawaiiImg, 
+    alt: 'Aerial view of the coastline and mountains of Maui, Hawaii'
   },
   { 
     src: ranierImg, 
