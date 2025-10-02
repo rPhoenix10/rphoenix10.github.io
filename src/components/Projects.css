@@ -36,7 +36,7 @@
     background-position: center;
     position: relative;
     min-height: 200px;
-    
+    border-bottom: rgb(15, 63, 134) 4px solid;
 }
 
 .card-header::before {
@@ -58,7 +58,7 @@
     padding: 8px 0;
     background-color: transparent; 
     width: 100%;
-    border-top: rgb(15, 63, 134) 4px solid;
+    
 }
 
 .nav-thumbnail {
