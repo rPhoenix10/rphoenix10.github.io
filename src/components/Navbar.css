@@ -82,10 +82,9 @@
 
 #header nav .button {
   height: 2.5em;
-  line-height: 2.5em;
+  line-height: 2em;
   padding: 0 1.5em;
   vertical-align: middle;
-  margin-right: 5em;
 }
 
 @media (max-width: 768px) {
@@ -102,7 +101,6 @@
     width: 100%;
     box-sizing: border-box;
     background: rgba(255,255,255,0.95);
-    box-shadow: 0 0 0.1em 0 rgba(0,0,0,0,0.25);
     transition: top 0.3s ease-in-out;
   }
 
@@ -121,7 +119,6 @@
     height: 2em;
     line-height: 2em;
     padding: 0 1em;
-    margin-right: 2em;
     font-size: 0.9em;
   }
 }

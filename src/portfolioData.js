@@ -68,7 +68,7 @@ export const projects = [
   //   repoUrl: "https://github.com/rPhoenix10"
   // },
   {
-    id: 2,
+    id: 1,
     title: "Ancora Training Portfolio",
     description: "This personal portfolio website, built with React and modern CSS, showcases the skills I developed during the Ancora Training program.",
     imageUrls: [
@@ -77,13 +77,12 @@ export const projects = [
         projectsImg,
         contactImg,
     ],
-    liveUrl: "#",
     repoUrl: "https://github.com/rPhoenix10/rphoenix10.github.io"
   },
 
   {
-    id: 3,
-    title: "Digital Keys (Capstone Project)",
+    id: 2,
+    title: "Virtual Keys (Capstone Project)",
     description: "A collaborative web application developed as a capstone project at Bellevue College, focusing on secure digital asset management.",
     imageUrls: [
         vr1Image,
@@ -95,7 +94,6 @@ export const projects = [
         vr7Image,
         vr8Image,
     ],
-    liveUrl: "#",
     repoUrl: "https://github.com/rPhoenix10/Capstone"
   },
 ];

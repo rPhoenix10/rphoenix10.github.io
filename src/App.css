@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 :root {
@@ -17,6 +23,7 @@ body {
   font-weight: 300;
   line-height: 1.65;
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* html {
@@ -101,14 +108,14 @@ p { margin: 0 0 2em 0; }
 }
 
 .button.primary:hover, input[type="submit"].primary:hover {
-  background-color: #d00000;
-  border-color: #d00000;
+  background-color: var(--dark-color);
+  border-color: var(--border-color);
 }
 
 ul.actions {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 2em 0 0 0;
 }
 
 ul.actions li {
@@ -148,7 +155,7 @@ ul.icons li {
 .col-6 { width: 50%; }
 .col-12 { width: 100%; }
 
-@media (max-width: 360px) {
+@media (max-width: 768px) {
   .col-12-xsmall { width: 100%; }
   .row {
     margin: 0 0 -1em -1em;
