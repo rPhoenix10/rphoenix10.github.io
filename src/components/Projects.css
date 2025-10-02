@@ -14,7 +14,6 @@
     position: relative;
     width: 100%;
     max-width: 400px;
-    aspect-ratio: 3 / 4.5;
     border-radius: 15px;
     background-color: #fff;
     outline: 1px solid rgba(0, 0, 0, 0.15);
@@ -36,7 +35,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 180px;
+    min-height: 200px;
     
 }
 
@@ -110,6 +109,7 @@
 }
 
 .github-link .fa-github {
+    margin-bottom: 2em;
     font-size: 2.5rem;
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
