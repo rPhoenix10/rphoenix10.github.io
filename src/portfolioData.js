@@ -1,3 +1,6 @@
+// Resume Image
+import resumePng from './project-files/Julius-Sale-Resume.png';
+
 // Nature Images
 import coulonImg from './project-files/nature/coulon.jpg';
 import hawaiiImg from './project-files/nature/hawaii.jpg';
@@ -118,6 +121,7 @@ export const github = {
 export const links = {
   github: 'https://github.com/rPhoenix10',
   linkedin: 'https://www.linkedin.com/in/kim-julius-sale-0722531a0/',
-  resumePdf: `./Julius-Sale-Resume.pdf`
+  resumePdf: `./Julius-Sale-Resume.pdf`,
+  resumePng
 };
 

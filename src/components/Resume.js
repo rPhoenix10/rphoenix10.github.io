@@ -1,24 +1,47 @@
-import React from 'react';
-import './Resume.css';
 import { links } from '../portfolioData';
+import { useMediaQuery } from './hooks/useMediaQuery';
+import './Resume.css';
 
 const Resume = ({ onClose }) => {
-  return (
-    <div className="resume-overlay" onClick={onClose}>
-      <article className="resume-article" onClick={(e) => e.stopPropagation()}>
-        <div className="resume-header">
-          <h2 className = "resume-title">RESUME</h2>
-          <button className="close-button" onClick={onClose}>&times;</button>
+    const isMobile = useMediaQuery('(max-width: 1024px)');
+
+    return (
+        <div className="resume-overlay" onClick={onClose}>
+            <article className="resume-article" onClick={(e) => e.stopPropagation()}>
+                <div className="resume-header">
+                    {isMobile ? (
+                        <a 
+                            href={links.resumePdf} 
+                            download="Julius-Sale-Resume.pdf"
+                            className="resume-title-link"
+                        >
+                            RESUME
+                            <img 
+                                alt="Download resume" 
+                                className="icon-image" 
+                                loading="lazy" 
+                                src="https://files.svgcdn.io/carbon/generate-pdf.svg"
+                            />
+                        </a>
+                    ) : (
+                        <h2 className="resume-title">RESUME</h2>
+                    )}
+                    <button className="close-button" onClick={onClose}>&times;</button>
+                </div>
+
+                {isMobile ? (
+                    <img src={links.resumePng} alt="My Resume" className="resume-image" />
+                ) : (
+                    <iframe
+                      src={links.resumePdf}
+                      className="resume-embed"
+                      allow="fullscreen"
+                      title="Julius Sale's Resume"
+                  ></iframe>
+                )}
+            </article>
         </div>
-         
-        <embed
-          src={links.resumePdf}
-          type="application/pdf"
-          className="resume-embed"
-        />
-      </article>
-    </div>
-  );
+    );
 };
 
 export default Resume;
