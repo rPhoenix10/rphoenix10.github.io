@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3bbb4eb4.css",
-    "main.js": "/static/js/main.afcccb53.js",
+    "main.css": "/static/css/main.e51d13c4.css",
+    "main.js": "/static/js/main.ff30e390.js",
     "static/js/453.d683d669.chunk.js": "/static/js/453.d683d669.chunk.js",
     "static/media/homepage.png": "/static/media/homepage.5f13fcd4d4e6112010e5.png",
     "static/media/VR8.png": "/static/media/VR8.3769357816f1aa6fe7c9.png",
@@ -18,16 +18,17 @@
     "static/media/oregon.jpg": "/static/media/oregon.0da0433d7a2be45a0d46.jpg",
     "static/media/ranier.jpg": "/static/media/ranier.1e38aea993dfccbaa831.jpg",
     "static/media/VR4.png": "/static/media/VR4.8f17eb9a994b44bd2f61.png",
+    "static/media/Julius-Sale-Resume.png": "/static/media/Julius-Sale-Resume.d83a1cf2ca5c916bc2c5.png",
     "static/media/VR1.png": "/static/media/VR1.71490ba5cde8776276c8.png",
     "static/media/contact.png": "/static/media/contact.a7724d47fda93168bca1.png",
     "static/media/projects.png": "/static/media/projects.9eed78a43ba806532500.png",
     "index.html": "/index.html",
-    "main.3bbb4eb4.css.map": "/static/css/main.3bbb4eb4.css.map",
-    "main.afcccb53.js.map": "/static/js/main.afcccb53.js.map",
+    "main.e51d13c4.css.map": "/static/css/main.e51d13c4.css.map",
+    "main.ff30e390.js.map": "/static/js/main.ff30e390.js.map",
     "453.d683d669.chunk.js.map": "/static/js/453.d683d669.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bbb4eb4.css",
-    "static/js/main.afcccb53.js"
+    "static/css/main.e51d13c4.css",
+    "static/js/main.ff30e390.js"
   ]
 }
