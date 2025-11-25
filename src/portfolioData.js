@@ -1,5 +1,6 @@
 // Resume Image
-import resumePng from './project-files/Julius-Sale-Resume.png';
+import resumePng1 from './project-files/Julius-Sale-Resume-pg1.png';
+import resumePng2 from './project-files/Julius-Sale-Resume-pg2.png';
 
 // Nature Images
 import coulonImg from './project-files/nature/coulon.jpg';
@@ -104,13 +105,14 @@ export const projects = [
 export const personalInfo = {
   name: 'Julius Sale',
   tagline: 
-    'Nature Lover. Code Enthusiast.|Crafting Web & App Solutions.|Aspiring Platform Engineer.'
+    'Nature Lover. Code Enthusiast.|Crafting Web & App Solutions.|Junior Software Engineer.'
 };
 
 export const aboutMe = {
   paragraphs: [
-    "I'm a passionate web developer based in Kent, WA, with a knack for creating intuitive and dynamic user experiences. My journey into tech was fueled by the Web & App Development Program at Ancora Training, where I dove deep into modern web fundamentals, from advanced JavaScript and APIs to React.",
-    "I thrive in collaborative environments and enjoyed contributing to the Digital Keys capstone project at Bellevue College. I'm eager to apply my skills in a professional setting and help build amazing applications."
+    "I am a Junior Software Developer based in Kent, WA, holding a Bachelor of Science in Computer Science from Bellevue College. My foundation is built upon formal study in Data Structures, Algorithms, and Object-Oriented Programming (C/C++, Python), complemented by practical application skills in modern development and React from the Ancora Training program.",
+
+    "I thrive on technical challenges and applied my expertise in System Integration as a contributor to the complex Digital Keys VR Capstone project. I am eager to apply my comprehensive skills in a professional setting and contribute to impactful solutions in Systems, Backend, or specialized engineering environments."
   ]
 };
 
@@ -122,6 +124,6 @@ export const links = {
   github: 'https://github.com/rPhoenix10',
   linkedin: 'https://www.linkedin.com/in/kim-julius-sale-0722531a0/',
   resumePdf: `./Julius-Sale-Resume.pdf`,
-  resumePng
+  resumePng: [resumePng1, resumePng2]
 };
 

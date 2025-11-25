@@ -30,8 +30,17 @@ const Resume = ({ onClose }) => {
                 </div>
 
                 {isMobile ? (
-                    <img src={links.resumePng} alt="My Resume" className="resume-image" />
-                ) : (
+                    <div className="resume-images-mobile">
+                        {links.resumePng.map((src, index) => (
+                            <img 
+                                key={index} 
+                                src={src} 
+                                alt={`My Resume Page ${index + 1}`} 
+                                className="resume-image" 
+                            />
+                        ))}
+                    </div>
+                ) : (
                     <iframe
                       src={links.resumePdf}
                       className="resume-embed"
